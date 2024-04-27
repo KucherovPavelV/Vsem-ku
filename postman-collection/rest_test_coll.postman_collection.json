@@ -1,0 +1,782 @@
+{
+	"info": {
+		"_postman_id": "ee7eb7b0-5122-4ed8-a422-5ed6a8688882",
+		"name": "rest_test_coll",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29916602"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "places",
+					"item": [
+						{
+							"name": "api/admin/places",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwODkvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTQyMjMwNzEsImV4cCI6MTcxNDIyNjY3MSwibmJmIjoxNzE0MjIzMDcxLCJqdGkiOiJsT2NqV1d0UVlXYkhoZ2cxIiwic3ViIjoiMjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.qCSZdrD4oESByHemHNGS1sTySMeYEVCVgN-6c4CkSq0"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Referer",
+										"value": "127.0.0.1:8000",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8089/api/admin/places?title=Токио&latitude=39.7254&longitude=47.4992",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8089",
+									"path": [
+										"api",
+										"admin",
+										"places"
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": "Токио"
+										},
+										{
+											"key": "latitude",
+											"value": "39.7254"
+										},
+										{
+											"key": "longitude",
+											"value": "47.4992"
+										}
+									]
+								},
+								"description": "Запрос POST для администратора, для создания нового места."
+							},
+							"response": []
+						},
+						{
+							"name": "api/admin/places",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwODkvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTQyMjMwNzEsImV4cCI6MTcxNDIyNjY3MSwibmJmIjoxNzE0MjIzMDcxLCJqdGkiOiJsT2NqV1d0UVlXYkhoZ2cxIiwic3ViIjoiMjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.qCSZdrD4oESByHemHNGS1sTySMeYEVCVgN-6c4CkSq0"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8089/api/admin/places",
+								"description": "Запрос GET для администратора, для просмотра всех мест."
+							},
+							"response": []
+						},
+						{
+							"name": "api/admin/places/{place}",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwODkvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTQyMjMwNzEsImV4cCI6MTcxNDIyNjY3MSwibmJmIjoxNzE0MjIzMDcxLCJqdGkiOiJsT2NqV1d0UVlXYkhoZ2cxIiwic3ViIjoiMjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.qCSZdrD4oESByHemHNGS1sTySMeYEVCVgN-6c4CkSq0"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8089/api/admin/places/11",
+								"description": "Запрос GET для администратора, для просмотра конкретного места."
+							},
+							"response": []
+						},
+						{
+							"name": "api/admin/places/{place}",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwODkvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTQyMjMwNzEsImV4cCI6MTcxNDIyNjY3MSwibmJmIjoxNzE0MjIzMDcxLCJqdGkiOiJsT2NqV1d0UVlXYkhoZ2cxIiwic3ViIjoiMjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.qCSZdrD4oESByHemHNGS1sTySMeYEVCVgN-6c4CkSq0"
+									}
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8089/api/admin/places/11?title=НЕТокио&latitude=39.7257&longitude=43.5992",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8089",
+									"path": [
+										"api",
+										"admin",
+										"places",
+										"11"
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": "НЕТокио"
+										},
+										{
+											"key": "latitude",
+											"value": "39.7257"
+										},
+										{
+											"key": "longitude",
+											"value": "43.5992"
+										}
+									]
+								},
+								"description": "Запрос PATCH для администратора, для просмотра редактирования места."
+							},
+							"response": []
+						},
+						{
+							"name": "api/admin/places/{place}",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwODkvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTQyMjMwNzEsImV4cCI6MTcxNDIyNjY3MSwibmJmIjoxNzE0MjIzMDcxLCJqdGkiOiJsT2NqV1d0UVlXYkhoZ2cxIiwic3ViIjoiMjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.qCSZdrD4oESByHemHNGS1sTySMeYEVCVgN-6c4CkSq0"
+									}
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8089/api/admin/places/11",
+								"description": "Запрос DELETE для администратора, для удаления места."
+							},
+							"response": []
+						}
+					],
+					"description": "Собрание запросов, предназначенных для администратора, для создания просмотра и редактирования мест."
+				},
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "api/admin/users",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8089/api/admin/users?login=user3&password=123123123&password_confirmation=123123123",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8089",
+									"path": [
+										"api",
+										"admin",
+										"users"
+									],
+									"query": [
+										{
+											"key": "login",
+											"value": "user3"
+										},
+										{
+											"key": "password",
+											"value": "123123123"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "123123123"
+										}
+									]
+								},
+								"description": "Запрос POST для администратора, для создания нового пользователя."
+							},
+							"response": []
+						},
+						{
+							"name": "api/admin/users/{user}",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8089/api/admin/users/1?login=user3",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8089",
+									"path": [
+										"api",
+										"admin",
+										"users",
+										"1"
+									],
+									"query": [
+										{
+											"key": "login",
+											"value": "user3"
+										}
+									]
+								},
+								"description": "Запрос PATCH для администратора, для редактирования пользователя."
+							},
+							"response": []
+						},
+						{
+							"name": "api/admin/users/{user}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://127.0.0.1:8089/api/admin/users/2",
+								"description": "Запрос GET для администратора, для просмотра всех пользователей."
+							},
+							"response": []
+						},
+						{
+							"name": "api/admin/users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://127.0.0.1:8089/api/admin/users",
+								"description": "Запрос GET для администратора, для просмотра пользователя."
+							},
+							"response": []
+						},
+						{
+							"name": "api/admin/users/{user}",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://127.0.0.1:8089/api/admin/users/4",
+								"description": "Запрос DELETE для администратора, для удаления пользователя."
+							},
+							"response": []
+						}
+					],
+					"description": "Собрание запросов, предназначенных для администратора, для создания просмотра и редактирования пользователей."
+				},
+				{
+					"name": "user-places",
+					"item": [
+						{
+							"name": "api/admin/user-places",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8089/api/admin/user-places",
+								"description": "Запрос GET для администратора, для просмотра избранного у всех пользователей."
+							},
+							"response": []
+						},
+						{
+							"name": "api/admin/user-places/{user}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8089/api/admin/user-places/3",
+								"description": "Запрос GET для администратора, для просмотра избранного у конкретного пользователя."
+							},
+							"response": []
+						},
+						{
+							"name": "api/admin/user-places/{user}",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8089/api/admin/user-places?user_id=1&place_id=4",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8089",
+									"path": [
+										"api",
+										"admin",
+										"user-places"
+									],
+									"query": [
+										{
+											"key": "user_id",
+											"value": "1"
+										},
+										{
+											"key": "place_id",
+											"value": "4"
+										}
+									]
+								},
+								"description": "Запрос POST для администратора, для создания записи избранного у конкретного пользователя."
+							},
+							"response": []
+						},
+						{
+							"name": "api/admin/user-places/{user}",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8089/api/admin/user-places/1?place_id=1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8089",
+									"path": [
+										"api",
+										"admin",
+										"user-places",
+										"1"
+									],
+									"query": [
+										{
+											"key": "place_id",
+											"value": "1"
+										}
+									]
+								},
+								"description": "Запрос DELETE для администратора, для удаления записи избранного у конкретного пользователя."
+							},
+							"response": []
+						}
+					],
+					"description": "Собрание запросов, предназначенных для администратора, для создания просмотра и удаления избранных мест."
+				}
+			],
+			"description": "Собрание запросов, предназначенных для администратора."
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "api/auth/login",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8089/api/auth/login?login=Admin&password=123123123",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8089",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							],
+							"query": [
+								{
+									"key": "login",
+									"value": "Admin"
+								},
+								{
+									"key": "password",
+									"value": "123123123"
+								}
+							]
+						},
+						"description": "Запрос POST для авторизации."
+					},
+					"response": []
+				},
+				{
+					"name": "api/auth/register",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8089/api/auth/register?login=user5f95i3&password=123123123&password_confirmation=123123123",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8089",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							],
+							"query": [
+								{
+									"key": "login",
+									"value": "user5f95i3"
+								},
+								{
+									"key": "password",
+									"value": "123123123"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123123123"
+								}
+							]
+						},
+						"description": "Запрос POST для регистрации."
+					},
+					"response": []
+				},
+				{
+					"name": "api/auth/me",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwODkvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTQyMTk0NTYsImV4cCI6MTcxNDIyMzA1NiwibmJmIjoxNzE0MjE5NDU2LCJqdGkiOiJWOVZOS0xLSHdDTVRlNHd5Iiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ._bZPVZFUCYHy3nOAcu2pCnCKyF81G5Vy-NZRwAs-opA"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8089/api/auth/me",
+						"description": "Запрос POST для получения инфформации об авторизованном пользователе."
+					},
+					"response": []
+				},
+				{
+					"name": "api/auth/logout",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwODkvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTQyMTk0NTYsImV4cCI6MTcxNDIyMzA1NiwibmJmIjoxNzE0MjE5NDU2LCJqdGkiOiJWOVZOS0xLSHdDTVRlNHd5Iiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ._bZPVZFUCYHy3nOAcu2pCnCKyF81G5Vy-NZRwAs-opA"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8089/api/auth/logout",
+						"description": "Запрос POST для выхода."
+					},
+					"response": []
+				}
+			],
+			"description": "Собрание запросов, предназначенных для администратора, для создания просмотра и редактирования мест."
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "user-place",
+					"item": [
+						{
+							"name": "api/user-places",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwODkvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTQyMjMwNzEsImV4cCI6MTcxNDIyNjY3MSwibmJmIjoxNzE0MjIzMDcxLCJqdGkiOiJsT2NqV1d0UVlXYkhoZ2cxIiwic3ViIjoiMjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.qCSZdrD4oESByHemHNGS1sTySMeYEVCVgN-6c4CkSq0"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8089/api/user-places?place_id=1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8089",
+									"path": [
+										"api",
+										"user-places"
+									],
+									"query": [
+										{
+											"key": "place_id",
+											"value": "1"
+										}
+									]
+								},
+								"description": "POST запрос для добавления нового места в избранное."
+							},
+							"response": []
+						},
+						{
+							"name": "api/user-places/{place}",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwODkvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTQyMjMwNzEsImV4cCI6MTcxNDIyNjY3MSwibmJmIjoxNzE0MjIzMDcxLCJqdGkiOiJsT2NqV1d0UVlXYkhoZ2cxIiwic3ViIjoiMjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.qCSZdrD4oESByHemHNGS1sTySMeYEVCVgN-6c4CkSq0"
+									}
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8089/api/user-places/1",
+								"description": "DELETE запрос для удаления места из избранного."
+							},
+							"response": []
+						},
+						{
+							"name": "api/user-places",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwODkvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTQyMjMwNzEsImV4cCI6MTcxNDIyNjY3MSwibmJmIjoxNzE0MjIzMDcxLCJqdGkiOiJsT2NqV1d0UVlXYkhoZ2cxIiwic3ViIjoiMjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.qCSZdrD4oESByHemHNGS1sTySMeYEVCVgN-6c4CkSq0"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8089/api/user-places",
+								"description": "GET запрос для просмотра избранных мест."
+							},
+							"response": []
+						}
+					],
+					"description": "Собрание запросов доступных авторизованным пользователям, для добавления, удаления, просмотра избранных мест."
+				}
+			],
+			"description": "Собрание запросов для пользователей."
+		},
+		{
+			"name": "all",
+			"item": [
+				{
+					"name": "api/places",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8089/api/places/",
+						"description": "GET запрос на просмотр всех мест отдыха."
+					},
+					"response": []
+				},
+				{
+					"name": "api/places/{place}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8089/api/places/1",
+						"description": "GET запрос на просмотр конкретного места отдыха."
+					},
+					"response": []
+				}
+			],
+			"description": "Набор общедоступных запросов."
+		}
+	]
+}
